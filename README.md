@@ -2,6 +2,6 @@
 Repo for my work in web-231 course
 <h2>Contributors</h2>
 <ul>
-<li>Proffesor Krasso</li>
+<li>Professor Krasso</li>
 <li>Andrew Britt</li>
 </ul>

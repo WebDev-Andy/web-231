@@ -1,0 +1,32 @@
+* {
+    
+}
+
+header {
+    font-weight: bolder;
+    
+}
+
+.return-home {
+    color: #4F3674;
+    text-decoration: none;
+}
+
+.return-home:hover {
+    background-color: #D6A800;
+    color: #4F3674;
+}
+
+.return-home:visited {
+    color: #3C275A;
+}
+
+#btnMyCourse {
+    background-color: antiquewhite;
+    border: solid black 1px;
+    border-radius: 2px;
+}
+
+#btnMyCourse:hover {
+    background-color: #3C275A;
+}

@@ -1,7 +1,10 @@
 /*
+==================================
+; Title: Britt-payroll.js
 ; Author: Andrew Britt
-; Class: WEB-231
-; 2022
+; Date: 26 Mar 2022
+; Description: Variables, Date and payRate change
+==================================
 */
 
 const firstName = "Robert"

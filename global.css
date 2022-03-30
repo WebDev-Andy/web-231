@@ -1,7 +1,14 @@
+/*
+=========================================
+; Title: global.css
+; Author: Andrew Britt
+; Date: 28 Mar 2022
+; Description: Global CSS for WEB-231
+=========================================    
+*/
 
 header {
     font-weight: bolder;
-    
 }
 
 .return-home {

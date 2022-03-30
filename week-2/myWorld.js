@@ -1,10 +1,10 @@
 /*
-==================================
+======================================
 ; Title: myWorld.js
 ; Author: Andrew Britt
 ; Date: 28 Mar 2022
 ; Description: Variables, Date and payRate change
-==================================
+======================================
 */
 let lastName = 'Britt'
 

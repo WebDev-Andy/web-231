@@ -25,5 +25,14 @@ header {
 }
 
 #btnMyCourse:hover {
-    background-color: #3C275A;
+    background-color: #dad878;
+}
+
+#bodyBox {
+    border: solid 1px darkslategray;
+    width: fit-content;
+    padding: 15px;
+    margin-left: 40%;
+    margin-top: 10%;
+    box-shadow: 13px 13px 16px 2px darkslategray;
 }

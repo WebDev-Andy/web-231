@@ -1,10 +1,13 @@
 /*
 
 */
-
-
-document.getElementById('textMyWorld').innerHTML = 'You are now in ' + lastName + 's world!'
-
 let lastName = 'Britt'
 
-console.log('You are now in ' + lastName + 's world!')
+document.getElementById('txtMyWorld').innerHTML = 'You are now in ' + lastName + '\'s world!'
+
+
+document.ready(function () {
+    ("#btnMyCourse").click(function () {
+        alert("WEB 231 - Enterprise JavaScript I");
+    })
+})

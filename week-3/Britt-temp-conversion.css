@@ -1,0 +1,24 @@
+body {
+    text-align: center;
+    font-family: 'Oswald', Verdana, Arial, sans-serif;
+}
+
+#card-title {
+    text-align: center;
+    margin-left: 36%;
+    border: solid white 1px;
+    width: fit-content;
+    box-shadow: -1px 5px 10px -2px grey;
+    padding: 23px;
+    color:#4F3674;
+}
+
+#form-fieldBtn {
+    background-color: #4F3674;
+    color: white;
+    padding: 10px;
+    padding-left: 60px;
+    padding-right: 60px;
+    border-radius: 5px;
+}
+

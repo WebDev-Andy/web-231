@@ -6,8 +6,11 @@
 ; Description: Conversion from F to C temps
 =========================================    
 */
+html {
+  
+}
+
 body {
-    
     font-family: 'Oswald', Verdana, Arial, sans-serif;
     font-size: 28px;
 }
@@ -15,9 +18,11 @@ body {
 .app-header {
     text-align: center;
     color: black;
+    font-size: 28px;
 }
 
 #card-title {
+
     text-align: center;
     margin-left: 20.5%;
     border: solid white 1px;
@@ -25,6 +30,7 @@ body {
     box-shadow: -1px 5px 10px -2px grey;
     padding: 2%;
     color:#4F3674;
+    
 }
 
 #card-title-two {

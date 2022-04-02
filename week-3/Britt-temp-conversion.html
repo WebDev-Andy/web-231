@@ -1,3 +1,11 @@
+<!--
+=========================================
+; Title: Britt-temp-conversion.html
+; Author: Andrew Britt
+; Date: 1 Apr 2022
+; Description: Conversion from F to C temp
+=========================================    
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,18 +20,24 @@
 </head>
 <body>
     <h1 class="app-header">Welcome to the Temperature Conversion App!</h1>
+
     <div id="card-title">Fahrenheit to Celsius Converter
-        <br />
-        <br />
-        <div id="form-field">Farhenheit value:
-            <input type="text" id="txtFahrenheit">
-                <br />
-                <br />
-            <input type="button" value="Convert Temperature" id="form-fieldBtn" onclick="clickIt();"></input>
+        <div id="form-field">
+            <p>
+                <label>Fahrenheit value:</label>
+
+                <input id="txtFahrenheit" type="text" placeholder="Fahrenheit" onclick="tToC(this.value)" onchange="tToC(this.value)">
+            </p>
+                <input type="button" value="Convert Temperature" id="form-fieldBtn"></input>
+              
         </div>
     </div>
-    
-    <a href="../index.html">Return</a>
+    <br />
+    <div id="card-title-two">
+        <p>Conversion Results</p>
+        <p id="results"></p>
+    </div>
+    <a id="returnBtn" href="../index.html">Return</a>
 <script src="Britt-temp-conversion.js"></script>
 </body>
 </html>

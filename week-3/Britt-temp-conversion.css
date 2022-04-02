@@ -1,24 +1,61 @@
+/*
+=========================================
+; Title: Britt-temp-conversion.css
+; Author: Andrew Britt
+; Date: 1 Apr 2022
+; Description: Conversion from F to C temps
+=========================================    
+*/
 body {
-    text-align: center;
+    
     font-family: 'Oswald', Verdana, Arial, sans-serif;
+    font-size: 28px;
 }
 
 #card-title {
     text-align: center;
-    margin-left: 36%;
+    margin-left: 20.5%;
     border: solid white 1px;
-    width: fit-content;
+    width: 55%;
     box-shadow: -1px 5px 10px -2px grey;
-    padding: 23px;
+    padding: 2%;
     color:#4F3674;
+}
+
+#card-title-two {
+    text-align: center;
+    margin-left: 20.5%;
+    border: solid white 1px;
+    width: 55%;
+    box-shadow: -1px 5px 10px -2px grey;
+    padding: 2%;
+    color:#4F3674;
+}
+
+#form-field {
+    color: black;
 }
 
 #form-fieldBtn {
     background-color: #4F3674;
     color: white;
+    margin-top: 5%;
     padding: 10px;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 15%;
+    padding-right: 15%;
     border-radius: 5px;
 }
 
+#returnBtn {
+    color: #453674;
+    text-decoration: none;
+}
+
+#returnBtn:hover {
+    background-color: #D6A800;
+    color: #4F3674;
+}
+
+#returnBtn:visited {
+    color: #3C275A;
+}

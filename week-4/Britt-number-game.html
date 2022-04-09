@@ -1,0 +1,44 @@
+<!--
+=========================================
+; Title: Britt-number-game.html
+; Author: Andrew Britt
+; Date: 4 Apr 2022
+; Description: 
+; Reference: 
+; Date reference accessed: 4 Apr 2022
+=========================================    
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Britt-number-game.css">
+    <title>WEB 231 - Enterprise JavaScript I</title>
+</head>
+<body>
+    <h1 class="app-header">Welcome to the numbers game!</h1>
+
+    <div id="card-title">Pick a number between 1 and 10
+        <div id="form-field">
+            <p>
+                <label>Guess the number:</label>
+
+                <input type="text" id="txtMyNumber" size="20%">
+            </p>
+                <input type="button" id="btnSubmit" value="Submit" onclick="guessNumber()"></input>
+        </div>
+    </div>
+    <br />
+    <div id="card-title-two">
+        <p>Results</p>
+        <p id="results"></p>
+    </div>
+    <a id="returnBtn" href="../index.html">Return</a>
+<script src="Britt-number-game.js"></script>
+</body>
+</html>

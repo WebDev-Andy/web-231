@@ -1,0 +1,53 @@
+<!--
+=========================================
+; Title: Britt-sequence-game.html
+; Author: Andrew Britt
+; Date: 11 Apr 2022
+; Description: HTML for sequence game
+; Reference:
+; Date reference accessed: 
+=========================================    
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Britt-sequence-game.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+   
+
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="app-header">Welcome to the sequence game!</h1>
+
+    <div id="card-title">
+        <p id="form-title">Sequence Selection Form</p>
+        <div>
+            <label id="form-field">Choose a number sequence:</label>
+            <select id="sequence" class="drop-down-menu">
+                <option value="select">--Select--</option>
+                <option value="fibonacci">Fibonacci Sequence</option>
+                <option value="even">Even Numbers</option>
+                <option value="odd">Odd Numbers</option>
+            </select>
+            <br>
+            <button id="btnDisplaySequence" type ="button" onclick="seqFunction()">Display Sequence</button>
+        </div>
+        
+    </div>
+
+    <div id="resultsDiv">
+        <p>Sequence Results</p>
+        <p id="results"></p>
+    </div>
+
+    <a id="return" href="../index.html">Return</a>
+
+    <script src="Britt-sequence-game.js"></script>
+</body>
+</html>

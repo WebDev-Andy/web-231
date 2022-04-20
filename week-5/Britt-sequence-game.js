@@ -7,33 +7,41 @@
 ; Reference: 
 ; Date reference accessed: 
 ===========================================
-*/
-
-let sequence = document.getElementById("sequence").value;
-    let choice = sequence;
+*/    
+    // Input - onClick event
+    // Output - back to results div
+    let choice = document.getElementById("sequence").value;
+    let output = document.getElementById("results");
     
-    if (choice === "fibonacci") {
-        
-        function seqFunction() {
-            if (n == 1)
-                return 0;
-            if (n == 2)
-                return 1;
-            let num1 = 0;
-            let num2 = 1;
-            let next;
-            let fibonacciSequenceText;
-            
-            while (let i = 2; i <= n; i++) {
+    // Function and string comparison 
+    function seqFunction() {
+        let choice = document.getElementById("sequence").value;
+    
+    // Fib sequence variable
+    let num1 = 0;
+    let num2 = 1;
+    let next;
+    let fibonacciSequenceText = "";
+
+        if("fibonacci" == choice) {
+            while (num1 < 40) {
+                fibonacciSequenceText += num1 + ", ";
                 next = num1 + num2;
                 num1 = num2;
                 num2 = next;
-                i+ = 1;
+                document.getElementById("results").innerHTML = fibonacciSequenceText; 
             }
-                return num2;
-                
+            
         }
-     
+        if("select" == choice) {
+            alert ("Invalid selection, please try again!");
+        }
+        else if("fibonacci" > choice) {
+            output.innerHTML = "Even";
+        }
+        else if("fibonacci" < choice) {
+            output.innerHTML = "Odd";
+        }
+      
     }
-    console.log(seqFunction(40));
-    
+   

@@ -29,18 +29,40 @@
                 next = num1 + num2;
                 num1 = num2;
                 num2 = next;
-                document.getElementById("results").innerHTML = fibonacciSequenceText; 
+                document.getElementById("results").innerHTML = fibonacciSequenceText.slice(0,-2); 
             }
             
         }
         if("select" == choice) {
             alert ("Invalid selection, please try again!");
         }
+
+            // Even number sequence generator loop
         else if("fibonacci" > choice) {
-            output.innerHTML = "Even";
+            let num4 = 0;
+            let num3 = 2;
+            let again;
+            let evenOutText = "";
+        do {
+            again = num3 + num4;
+            num4 = again;
+            evenOutText += again + ", ";
+            document.getElementById("results").innerHTML = evenOutText.slice(0,-6); 
+            }
+        while (again < 20);
         }
+
+        // Odd number sequence generator loop
         else if("fibonacci" < choice) {
-            output.innerHTML = "Odd";
+            let num5 = 1;
+            let oddOutText = "";
+            while (num5 < 20) {
+                andAgain = num5 + num6;
+                num5 = andAgain + num7;
+                oddOutText += num6 + ", ";
+                document.getElementById("results").innerHTML = oddOutText.slice(0,-6); 
+            }
+            
         }
       
     }

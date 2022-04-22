@@ -2,8 +2,8 @@
 =========================================
 ; Title: Britt-sequence-game.html
 ; Author: Andrew Britt
-; Date: 11 Apr 2022
-; Description: HTML for sequence game
+; Date: 21 Apr 2022
+; Description: HTML for in-n-out-books
 ; Reference:
 ; Date reference accessed: 
 =========================================    
@@ -14,7 +14,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Britt-sequence-game.css">
+    <link rel="stylesheet" href="Britt-in-n-out-books.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
@@ -23,31 +23,30 @@
     <title>WEB 231 - Enterprise JavaScript I</title>
 </head>
 <body>
-    <h1 class="app-header">Welcome to the sequence game!</h1>
+    <h1 class="app-header">Welcome to In-N-Out-Books</h1>
 
     <div id="card-title">
-        <p id="form-title">Sequence Selection Form</p>
+        <p id="form-title">My Favorites</p>
         <div>
-            <label id="form-field">Choose a number sequence:</label>
+            <label id="form-field">Choose a listing:</label>
             <select id="sequence" class="drop-down-menu">
                 <option value="select">--Select--</option>
-                <option value="fibonacci">Fibonacci Sequence</option>
-                <option value="even">Even Numbers</option>
-                <option value="odd">Odd Numbers</option>
+                <option value="fibonacci">Top 3 Favorite Books</option>
+                <option value="even">Top 3 Favorite Authors</option>
             </select>
             <br>
-            <button id="btnDisplaySequence" type ="button" onclick="seqFunction()">Display Sequence</button>
+            <button id="btnDisplayListing" type ="button" onclick="seqFunction()">Display Listing</button>
         </div>
         
     </div>
 
+    <a id="return" href="../index.html">Return</a>
+
     <div id="resultsDiv">
-        <p>Sequence Results</p>
+        <p>Top 3 Favorite Books</p>
         <p id="results"><br></p>
     </div>
 
-    <a id="return" href="../index.html">Return</a>
-
-    <script src="Britt-sequence-game.js"></script>
+    <script src="Britt-in-n-out-books.js"></script>
 </body>
 </html>

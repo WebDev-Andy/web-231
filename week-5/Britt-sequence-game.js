@@ -4,8 +4,8 @@
 ; Author: Andrew Britt
 ; Date: 11 Apr 2022
 ; Description: JavaScript code for sequence game
-; Reference: 
-; Date reference accessed: 
+; Reference: https://www.youtube.com/watch?v=s9wW2PpJsmQ
+; Date reference accessed: 19Apr2021
 ===========================================
 */    
     // Input - onClick event

@@ -54,13 +54,11 @@
 
         // Odd number sequence generator loop
         else if("fibonacci" < choice) {
-            let num5 = 1;
             let oddOutText = "";
-            while (num5 < 20) {
-                andAgain = num5 + num6;
-                num5 = andAgain + num7;
-                oddOutText += num6 + ", ";
-                document.getElementById("results").innerHTML = oddOutText.slice(0,-6); 
+            for (let i = 1; i <= 20; i++) {
+                if (i % 2 !== 0)
+                oddOutText += i + ", ";
+                document.getElementById("results").innerHTML = oddOutText.slice(0,-2); 
             }
             
         }

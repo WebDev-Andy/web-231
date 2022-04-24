@@ -25,11 +25,13 @@ body {
     margin-right: 20%;
     box-shadow: -1px 5px 10px -2px grey;
     padding: 0%;
+    height: 200px;
 }
 
 #results {
     padding: .1%;
     margin-top: -3%;
+    
 }
 
 #form-field {

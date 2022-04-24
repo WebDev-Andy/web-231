@@ -19,7 +19,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
    
-
     <title>WEB 231 - Enterprise JavaScript I</title>
 </head>
 <body>
@@ -29,24 +28,100 @@
         <p id="form-title">My Favorites</p>
         <div>
             <label id="form-field">Choose a listing:</label>
-            <select id="stuff" class="drop-down-menu">
-                <option value="select">--Select--</option>
-                <option value="books">Top 3 Favorite Books</option>
-                <option value="authors">Top 3 Favorite Authors</option>
-            </select>
+                <select id="favoriteList" class="drop-down-menu">
+                    <option value="select">--Select--</option>
+                    <option value="books">Top 3 Favorite Books</option>
+                    <option value="authors">Top 3 Favorite Authors</option>
+                </select>
             <br>
-            <button id="btnDisplayListing" type ="button" onclick="myFunction()">Display Listing</button>
+            <button id="btnDisplayListing" type ="button" onclick="bookFunction()">Display Listing</button>
         </div>
-        
     </div>
-
+<!--Return button, goes to index file-->
     <a id="return" href="../index.html">Return</a>
+<!--Script insertion with Object Literals-->
+        <script>
+// First three object literals - Books
+            const booksJson = 
+                {
+                    "isbn": 98623540752,
+                    "title": "Some Book",
+                    "pages": 489        
+                };
+            
+            const booksJsonTwo = 
+                {
+                    "isbn": 3732768356,
+                    "title": "Another Book",
+                    "pages": 655
+                };
 
-    <div id="resultsDiv">
-        <p>Top 3 Favorite Books</p>
-        <p id="results"><br></p>
-    </div>
+            const booksJsonThree = 
+                {
+                    "isbn": 2348474578,
+                    "title": "Guess What, a Book",
+                    "pages": 973
+                };
+// Second three object literals - Authors
+            const authorJson = 
+                {
+                    "name": "Carl Sagan",
+                    "genre": "Science"
+                };
 
-    <script src="Britt-in-n-out-books.js"></script>
+            const authorJsonTwo = 
+                {
+                    "name": "Richard Dawkins",
+                    "genre": "Evolutionary-Biology"
+                };
+
+            const authorJsonThree = 
+                {
+                    "name": "Michael Pollan",
+                    "genre": "Documentary"
+                };
+
+// favorite-authors div and favorite-books div, style display none
+        let books = document.getElementById("favorite-books").style.display = "none";
+        
+        let authors = document.getElementById("favorite-books").style.display = "none";
+// JavaScript code to capture onClick event and bind to 
+
+function bookFunction() {
+    let choice = document.getElementById("favoriteList").value;
+
+    if (choice == "books") {
+        while (choice == "books") {
+            document.getElementById("txtISBN1").innerHTML = hello;
+        }
+        
+    }
+        </script>
+
+    <p></p>
+    <table>
+        <tr>
+            <th>fgh</th>
+            <th>fgh</th>
+            <th>fgh</th>
+        </tr>
+        <tr>
+            <td id="txtISBN1"></td>
+            <td id="txtTitle1"></td>
+            <td id="txtPages1"></td>
+        </tr>
+        <tr>
+            <td id="txtISBN2"></td>
+            <td id="txtTitle2"></td>
+            <td id="txtPages2"></td>
+        </tr>
+        <tr>
+            <td id="txtISBN3"></td>
+            <td id="txtTitle3"></td>
+            <td id="txtPages3"></td>
+        </tr>
+    </table>
+</div>
+
 </body>
 </html>

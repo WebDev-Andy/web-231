@@ -8,3 +8,10 @@
 ; Date reference accessed: 
 ===========================================
 */   
+
+
+function bookFunction() {
+    let choice = document.getElementById("favoriteList").value;
+
+    
+}

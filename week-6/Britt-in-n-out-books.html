@@ -39,7 +39,7 @@
     </div>
 <!--Return button, goes to index file-->
     <a id="return" href="../index.html">Return</a>
-
+<div id="resultsDiv">
 <table>
     <thead>
         <tr>
@@ -70,7 +70,7 @@
         <td id="txtPages3"></td>
     </tr>
 </table>
-
+</div>
 <!--Script insertion with Object Literals-->
     <script>
 // Three Book object literals
@@ -95,19 +95,19 @@
             "pages": 973
         };
 // Three Author object literals 
-        const authorJson = {
+        const authorDataOne = {
             "id": 4,
             "name": "Carl Sagan",
             "genre": "Science"
         };
 
-        const authorJsonTwo = {
+        const authorDataTwo = {
             "id": 5,
             "name": "Richard Dawkins",
             "genre": "Evolutionary-Biology"
         };
 
-        const authorJsonThree = {
+        const authorDataThree = {
             "id": 6,
             "name": "Michael Pollan",
             "genre": "Documentary"
@@ -138,9 +138,21 @@
     document.getElementById("txtPages1").innerHTML = booksDataOne.pages;
     document.getElementById("txtPages2").innerHTML = booksDataTwo.pages;
     document.getElementById("txtPages3").innerHTML = booksDataThree.pages;
-    }
+            }
 
+        if (choice == "authors") {
+    document.getElementById("tHeader1").innerHTML = "Name";
+    document.getElementById("tHeader2").innerHTML = "Genre";
+    document.getElementById("txtISBN1").innerHTML = authorDataOne.name;
+    document.getElementById("txtISBN2").innerHTML = authorDataTwo.name;
+    document.getElementById("txtISBN3").innerHTML = authorDataThree.name;
+    document.getElementById("txtTitle1").innerHTML = authorDataTwo.genre;
+    document.getElementById("txtTitle2").innerHTML = authorDataOne.genre;
+    document.getElementById("txtTitle3").innerHTML = authorDataThree.genre;
     
+        }
+
+
 
 };
         </script>

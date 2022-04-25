@@ -28,6 +28,13 @@ body {
     height: 200px;
 }
 
+table {
+    text-align: center;
+    margin-left: 30%;
+    background-color: pink;
+    color: red;
+}
+
 #results {
     padding: .1%;
     margin-top: -3%;

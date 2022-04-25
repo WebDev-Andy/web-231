@@ -8,6 +8,7 @@
 ; Date reference accessed: 19Apr2021
 ===========================================
 */    
+
     // Input - onClick event
     // Output - back to results div
     let choice = document.getElementById("sequence").value;

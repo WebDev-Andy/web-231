@@ -25,14 +25,27 @@ body {
     margin-right: 20%;
     box-shadow: -1px 5px 10px -2px grey;
     padding: 0%;
-    height: 200px;
+    height: 300px;
 }
 
 table {
-    text-align: center;
-    margin-left: 30%;
-    background-color: pink;
-    color: red;
+    text-align: left;
+    margin-left: 3%;
+    margin-top: 5%;
+    border: solid lightgray 1px;
+    width: 95%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #4F3674;
+    color: white;
+    
+}
+
+td {
+    border: solid lightgray 1px;
+   padding: 10px;
 }
 
 #results {

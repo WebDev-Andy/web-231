@@ -39,7 +39,8 @@
     </div>
 <!--Return button, goes to index file-->
     <a id="return" href="../index.html">Return</a>
-<div id="resultsDiv">
+<!--favorite-books div-->
+<div id="favorite-books">
     <p id="selectionTitle"></p>
 <table>
     <thead>
@@ -66,6 +67,34 @@
     </tr>
 </table>
 </div>
+
+<!--favorite-authors div-->
+<div id="favorite-authors">
+    <p id="selectionTitle"></p>
+<table>
+    <thead>
+        <tr>
+            <th id="tHeader1"></th>
+            <th id="tHeader2"></th>
+        </tr>
+    </thead>
+    <tr>
+        <td id="txtAuthor1"></td>
+        <td id="txtGenre1"></td>
+        
+    </tr>
+    <tr>
+        <td id="txtAuthor2"></td>
+        <td id="txtGenre2"></td>
+        
+    </tr>
+    <tr>
+        <td id="txtAuthor3"></td>
+        <td id="txtGenre3"></td>
+    </tr>
+</table>
+</div>
+
 <!--Script insertion with Object Literals-->
     <script>
 // Three Book object literals
@@ -104,19 +133,20 @@
             "genre": "Documentary"
         };
     // favorite-authors div and favorite-books div, style display none
-    // let books = document.getElementById("favorite-books").style.display = "none";    
-    //  let authors = document.getElementById("favorite-books").style.display = "none";
+    let books = document.getElementById("favorite-books").style.display = "none";    
+    let authors = document.getElementById("favorite-authors").style.display = "none";
 
 //onload table data function
-    window.onload = () => {
-        tableFunction();
-    };
-// Make table visible 
+//    window.onload = () => {
+//        tableFunction();
+//    };
   
 // JavaScript code to capture onClick event and run statements
     function tableFunction() {
         let choice = document.getElementById("favoriteList").value;
             if (choice == "books") {
+                document.getElementById("favorite-books").style.display = "block";    
+                document.getElementById("favorite-authors").style.display = "none";
                 document.getElementById("selectionTitle").innerHTML = "Top 3 Favorite Books";
                 document.getElementById("tHeader1").innerHTML = "ISBN";
                 document.getElementById("tHeader2").innerHTML = "Title";
@@ -133,17 +163,24 @@
             }
 
             if (choice == "authors") {
+                document.getElementById("favorite-books").style.display = "none";    
+                document.getElementById("favorite-authors").style.display = "block";
                 document.getElementById("selectionTitle").innerHTML = "Top 3 Favorite Authors";
                 document.getElementById("tHeader1").innerHTML = "Name";
                 document.getElementById("tHeader2").innerHTML = "Genre";
-                document.getElementById("txtISBN1").innerHTML = authorDataOne.name;
-                document.getElementById("txtISBN2").innerHTML = authorDataTwo.name;
-                document.getElementById("txtISBN3").innerHTML = authorDataThree.name;
-                document.getElementById("txtTitle1").innerHTML = authorDataOne.genre;
-                document.getElementById("txtTitle2").innerHTML = authorDataTwo.genre;
-                document.getElementById("txtTitle3").innerHTML = authorDataThree.genre;
+                document.getElementById("txtAuthor1").innerHTML = authorDataOne.name;
+                document.getElementById("txtAuthor2").innerHTML = authorDataTwo.name;
+                document.getElementById("txtAuthor3").innerHTML = authorDataThree.name;
+                document.getElementById("txtGenre1").innerHTML = authorDataOne.genre;
+                document.getElementById("txtGenre2").innerHTML = authorDataTwo.genre;
+                document.getElementById("txtGenre3").innerHTML = authorDataThree.genre;
             }
 
+            if (choice == "select") {
+                document.getElementById("favorite-books").style.display = "none";    
+                document.getElementById("favorite-authors").style.display = "none";
+
+            }
 };
         </script>
 </div>

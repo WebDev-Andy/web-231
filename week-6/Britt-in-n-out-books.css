@@ -16,7 +16,19 @@ body {
     margin-right: 20%;
 }
 
-#resultsDiv {
+#favorite-authors {
+    margin-top: 5%;
+    text-align: center;
+    color: #4F3674;
+    font-size: 28px;
+    margin-left: 20%;
+    margin-right: 20%;
+    box-shadow: -1px 5px 10px -2px grey;
+    padding: 0%;
+    height: 300px;
+}
+
+#favorite-books {
     margin-top: 5%;
     text-align: center;
     color: #4F3674;
@@ -48,11 +60,7 @@ td {
    padding: 10px;
 }
 
-#results {
-    padding: .1%;
-    margin-top: -3%;
-    
-}
+
 
 #form-field {
     margin-left: 5%;

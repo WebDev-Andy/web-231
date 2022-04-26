@@ -41,7 +41,7 @@
     <a id="return" href="../index.html">Return</a>
 <!--favorite-books div-->
 <div id="favorite-books">
-    <p id="selectionTitle"></p>
+    <p id="selectionBooks"></p>
 <table>
     <thead>
         <tr>
@@ -70,12 +70,12 @@
 
 <!--favorite-authors div-->
 <div id="favorite-authors">
-    <p id="selectionTitle"></p>
+    <p id="selectionAuthor"></p>
 <table>
     <thead>
         <tr>
-            <th id="tHeader1"></th>
-            <th id="tHeader2"></th>
+            <th id="tHeader3"></th>
+            <th id="tHeader4"></th>
         </tr>
     </thead>
     <tr>
@@ -147,7 +147,7 @@
             if (choice == "books") {
                 document.getElementById("favorite-books").style.display = "block";    
                 document.getElementById("favorite-authors").style.display = "none";
-                document.getElementById("selectionTitle").innerHTML = "Top 3 Favorite Books";
+                document.getElementById("selectionBooks").innerHTML = "Top 3 Favorite Books";
                 document.getElementById("tHeader1").innerHTML = "ISBN";
                 document.getElementById("tHeader2").innerHTML = "Title";
                 document.getElementById("tHeader3").innerHTML = "Pages";
@@ -165,9 +165,9 @@
             if (choice == "authors") {
                 document.getElementById("favorite-books").style.display = "none";    
                 document.getElementById("favorite-authors").style.display = "block";
-                document.getElementById("selectionTitle").innerHTML = "Top 3 Favorite Authors";
-                document.getElementById("tHeader1").innerHTML = "Name";
-                document.getElementById("tHeader2").innerHTML = "Genre";
+                document.getElementById("selectionAuthor").innerHTML = "Top 3 Favorite Authors";
+                document.getElementById("tHeader3").innerHTML = "Name";
+                document.getElementById("tHeader4").innerHTML = "Genre";
                 document.getElementById("txtAuthor1").innerHTML = authorDataOne.name;
                 document.getElementById("txtAuthor2").innerHTML = authorDataTwo.name;
                 document.getElementById("txtAuthor3").innerHTML = authorDataThree.name;

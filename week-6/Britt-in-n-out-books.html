@@ -75,14 +75,12 @@
             "title": "Some Book",
             "pages": 489        
         };
-            
         const booksDataTwo = {
             "id": 2,
             "isbn": 373276836,
             "title": "Another Book",
             "pages": 655
         };
-
         const booksDataThree = {
             "id": 3,
             "isbn": 234847457,
@@ -95,19 +93,16 @@
             "name": "Carl Sagan",
             "genre": "Science"
         };
-
         const authorDataTwo = {
             "id": 5,
             "name": "Richard Dawkins",
             "genre": "Evolutionary-Biology"
         };
-
         const authorDataThree = {
             "id": 6,
             "name": "Michael Pollan",
             "genre": "Documentary"
         };
-
     // favorite-authors div and favorite-books div, style display none
     // let books = document.getElementById("favorite-books").style.display = "none";    
     //  let authors = document.getElementById("favorite-books").style.display = "none";
@@ -116,11 +111,13 @@
     window.onload = () => {
         tableFunction();
     };
-
+// Make table visible 
+  
 // JavaScript code to capture onClick event and run statements
     function tableFunction() {
         let choice = document.getElementById("favoriteList").value;
             if (choice == "books") {
+                document.getElementById("selectionTitle").innerHTML = "Top 3 Favorite Books";
                 document.getElementById("tHeader1").innerHTML = "ISBN";
                 document.getElementById("tHeader2").innerHTML = "Title";
                 document.getElementById("tHeader3").innerHTML = "Pages";
@@ -136,6 +133,7 @@
             }
 
             if (choice == "authors") {
+                document.getElementById("selectionTitle").innerHTML = "Top 3 Favorite Authors";
                 document.getElementById("tHeader1").innerHTML = "Name";
                 document.getElementById("tHeader2").innerHTML = "Genre";
                 document.getElementById("txtISBN1").innerHTML = authorDataOne.name;

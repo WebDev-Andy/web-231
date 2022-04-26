@@ -4,7 +4,7 @@
 ; Author: Andrew Britt
 ; Date: 21 Apr 2022
 ; Description: HTML for in-n-out-books
-; Reference:
+; Reference: 
 ; Date reference accessed: 
 =========================================    
 -->
@@ -74,8 +74,8 @@
 <table>
     <thead>
         <tr>
-            <th id="tHeader3"></th>
             <th id="tHeader4"></th>
+            <th id="tHeader5"></th>
         </tr>
     </thead>
     <tr>
@@ -100,21 +100,21 @@
 // Three Book object literals
         const booksDataOne = {
             "id": 1,
-            "isbn": 986235752,
-            "title": "Some Book",
-            "pages": 489        
+            "isbn": 0345409469,
+            "title": "The Demon-Haunted World",
+            "pages": 455        
         };
         const booksDataTwo = {
             "id": 2,
-            "isbn": 373276836,
-            "title": "Another Book",
-            "pages": 655
+            "isbn": 0199291144,
+            "title": "The Selfish Gene",
+            "pages": 384
         };
         const booksDataThree = {
             "id": 3,
-            "isbn": 234847457,
-            "title": "The Book",
-            "pages": 973
+            "isbn": 1443434973,
+            "title": 1984,
+            "pages": 416
         };
 // Three Author object literals 
         const authorDataOne = {
@@ -129,8 +129,8 @@
         };
         const authorDataThree = {
             "id": 6,
-            "name": "Michael Pollan",
-            "genre": "Documentary"
+            "name": "George Orwell",
+            "genre": "Sci-Fi"
         };
     // favorite-authors div and favorite-books div, style display none
     let books = document.getElementById("favorite-books").style.display = "none";    
@@ -166,8 +166,8 @@
                 document.getElementById("favorite-books").style.display = "none";    
                 document.getElementById("favorite-authors").style.display = "block";
                 document.getElementById("selectionAuthor").innerHTML = "Top 3 Favorite Authors";
-                document.getElementById("tHeader3").innerHTML = "Name";
-                document.getElementById("tHeader4").innerHTML = "Genre";
+                document.getElementById("tHeader4").innerHTML = "Name";
+                document.getElementById("tHeader5").innerHTML = "Genre";
                 document.getElementById("txtAuthor1").innerHTML = authorDataOne.name;
                 document.getElementById("txtAuthor2").innerHTML = authorDataTwo.name;
                 document.getElementById("txtAuthor3").innerHTML = authorDataThree.name;
@@ -179,7 +179,6 @@
             if (choice == "select") {
                 document.getElementById("favorite-books").style.display = "none";    
                 document.getElementById("favorite-authors").style.display = "none";
-
             }
 };
         </script>

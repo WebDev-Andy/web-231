@@ -17,50 +17,55 @@ body {
 }
 
 #favorite-authors {
-    margin-top: 5%;
+    margin-top: 2%;
     text-align: center;
     color: #4F3674;
     font-size: 28px;
     margin-left: 20%;
     margin-right: 20%;
     box-shadow: -1px 5px 10px -2px grey;
-    padding: 0%;
-    height: 300px;
+    padding: 10px;
+    height: 355px;
 }
 
 #favorite-books {
-    margin-top: 5%;
+    margin-top: 2%;
     text-align: center;
     color: #4F3674;
     font-size: 28px;
     margin-left: 20%;
     margin-right: 20%;
     box-shadow: -1px 5px 10px -2px grey;
-    padding: 0%;
-    height: 300px;
+    padding: 10px;
+    height: 355px;
 }
 
 table {
+    margin-bottom: 30px;
+    margin-left: 0%;
+    margin-top: -15px;
     text-align: left;
-    margin-left: 3%;
-    margin-top: -4%;
-    border: solid lightgray 1px;
-    width: 95%;
+    width: 100%;
     border-collapse: collapse;
 }
 
 th {
     background-color: #4F3674;
     color: white;
-    
+    padding-top: 12px;
+    padding-left: 9px;
+    border: solid #ccc 1px;
+    padding-bottom: 12px;
 }
 
 td {
-    border: solid lightgray 1px;
-   padding: 10px;
+    border: solid #ccc 1px;
+    padding: 10px;
 }
 
-
+tr:hover {
+    background-color: #D6A800;
+}
 
 #form-field {
     margin-left: 5%;

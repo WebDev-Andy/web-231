@@ -111,7 +111,6 @@
             <th id="servicesHeader2"></th>
             <th id="servicesHeader3"></th>
             <th id="servicesHeader4"></th>
-            <th id="servicesHeader5"></th>
         </tr>
     </thead>
     <tr>
@@ -152,7 +151,6 @@
             <th id="employeesHeader2"></th>
             <th id="employeesHeader3"></th>
             <th id="employeesHeader4"></th>
-            <th id="employeesHeader5"></th>
         </tr>
     </thead>
     <tr>
@@ -201,9 +199,6 @@
                 this.totalValue = price * quantity;
             }
         };
-
-        let myProduct1 = new Product(1234, "bugzapper", 50, 2);
-        console.log(myProduct1);
         
 // services class
         class Services {
@@ -215,9 +210,6 @@
             }
         };
 
-        let myServices1 = new Services(4311, "chicken-grooming", 45, 2);
-        console.log(myServices1);
-
 // employees class
         class Employees {
             constructor(id, firstName, lastName, salary) {
@@ -228,40 +220,47 @@
             }
         };
 
+// products objects created from class
+        let myProduct1 = new Product(1234, "bugzapper", 50, 2);
+        console.log(myProduct1);
+
+        let myProduct2 = new Product(8656, "time-machine", 999, 3);
+        console.log(myProduct2);
+
+        let myProduct3 = new Product(0267, "Halo-Drive", 340, 6);
+        console.log(myProduct3);
+
+        let myProduct4 = new Product(0336, "flying-potion", 689, 2);
+        console.log(myProduct4);
+
+        let myProduct5 = new Product(4564, "Hammer-Pants", 10, 2);
+        console.log(myProduct5);
+
+// service objects created from class
+        let myServices1 = new Services(4311, "chicken-grooming", 45, 3);
+        console.log(myServices1);
+
+        let myServices2 = new Services(9476, "frog-grooming", 65, 2);
+        console.log(myServices2);
+
+        let myServices3 = new Services(2478, "fish-grooming", 85, 1);
+        console.log(myServices3);
+
+// employee objects created from class
         let myEmployee1 = new Employees(321, "Rick", "Sanchez", 9999);
         console.log(myEmployee1);
 
+        let myEmployee2 = new Employees(536, "Morty", "Smith", 1);
+        console.log(myEmployee2);
 
-// Three Book object literals
-        const booksDataOne = {
-            "isbn": 0345409469,
-            "title": "The Demon-Haunted World",
-            "pages": 455        
-        };
-        const booksDataTwo = {
-            "isbn": 0199291144,
-            "title": "The Selfish Gene",
-            "pages": 384
-        };
-        const booksDataThree = {
-            "isbn": 1443434973,
-            "title": 1984,
-            "pages": 416
-        };
+        let myEmployee3 = new Employees(765, "Jimi", "Hendrix", 23);
+        console.log(myEmployee3);
 
-// Three Author object literals 
-        const authorDataOne = {
-            "name": "Carl Sagan",
-            "genre": "Science"
-        };
-        const authorDataTwo = {
-            "name": "Richard Dawkins",
-            "genre": "Evolutionary-Biology"
-        };
-        const authorDataThree = {
-            "name": "George Orwell",
-            "genre": "Sci-Fi"
-        };
+        let myEmployee4 = new Employees(987, "Father", "Time", 543);
+        console.log(myEmployee4);
+
+        let myEmployee5 = new Employees(873, "Johnny", "Cash", 544);
+        console.log(myEmployee5);
 
 // products div, services and employees div containing the tables - Hide tables via display-none
     let products = document.getElementById("products").style.display = "none";    
@@ -271,48 +270,119 @@
 // JavaScript code to capture onClick event and run statements
     function tableFunction() {
         let choice = document.getElementById("javazonList").value;
-            if (choice == "products") {
-                document.getElementById("products").style.display = "block";    
-                document.getElementById("services").style.display = "none";
-                document.getElementById("selectionBooks").innerHTML = "Top 3 Favorite Books";
-                document.getElementById("tHeader1").innerHTML = "ISBN";
-                document.getElementById("tHeader2").innerHTML = "Title";
-                document.getElementById("tHeader3").innerHTML = "Pages";
-                document.getElementById("txtISBN1").innerHTML = booksDataOne.isbn;
-                document.getElementById("txtISBN2").innerHTML = booksDataTwo.isbn;
-                document.getElementById("txtISBN3").innerHTML = booksDataThree.isbn;
-                document.getElementById("txtTitle1").innerHTML = booksDataOne.title;
-                document.getElementById("txtTitle2").innerHTML = booksDataTwo.title;
-                document.getElementById("txtTitle3").innerHTML = booksDataThree.title;
-                document.getElementById("txtPages1").innerHTML = booksDataOne.pages;
-                document.getElementById("txtPages2").innerHTML = booksDataTwo.pages;
-                document.getElementById("txtPages3").innerHTML = booksDataThree.pages;
-            }
 
-            if (choice == "services") {
-                document.getElementById("products").style.display = "none";    
-                document.getElementById("services").style.display = "block";
-                document.getElementById("selectionAuthor").innerHTML = "Top 3 Favorite Authors";
-                document.getElementById("tHeader4").innerHTML = "Name";
-                document.getElementById("tHeader5").innerHTML = "Genre";
-                document.getElementById("txtAuthor1").innerHTML = authorDataOne.name;
-                document.getElementById("txtAuthor2").innerHTML = authorDataTwo.name;
-                document.getElementById("txtAuthor3").innerHTML = authorDataThree.name;
-                document.getElementById("txtGenre1").innerHTML = authorDataOne.genre;
-                document.getElementById("txtGenre2").innerHTML = authorDataTwo.genre;
-                document.getElementById("txtGenre3").innerHTML = authorDataThree.genre;
-            }
+// switch statement - Testing with console
+    switch (choice) {
+    case "products":
+        console.log("Way to go!");
+        document.getElementById("products").style.display = "block";
+        document.getElementById("services").style.display = "none";
+        document.getElementById("employees").style.display = "none";
+    break;
+    case "services":
+        console.log("Again, nice job");
+        document.getElementById("products").style.display = "none";
+        document.getElementById("services").style.display = "block";
+        document.getElementById("employees").style.display = "none";
+    break;
+    case "employees": 
+        console.log("You're doing great!");
+        document.getElementById("products").style.display = "none";
+        document.getElementById("services").style.display = "none";
+        document.getElementById("employees").style.display = "block";
+    break;
+    }
+// begin if statement - products
+    if (choice == "products") {
+        document.getElementById("products").style.display = "block";    
+        document.getElementById("services").style.display = "none";
+        document.getElementById("employees").style.display = "none";
+        document.getElementById("selectionProducts").innerHTML = "Javazon Products";
+// table header elements
+        document.getElementById("productHeader1").innerHTML = "Product ID";
+        document.getElementById("productHeader2").innerHTML = "Description";
+        document.getElementById("productHeader3").innerHTML = "Price";
+        document.getElementById("productHeader4").innerHTML = "Quantity";
+        document.getElementById("productHeader5").innerHTML = "Total Value";
+// product table data elements
+        document.getElementById("txtProductId1").innerHTML = myProduct1.id;
+        document.getElementById("txtProductId2").innerHTML = myProduct2.id;
+        document.getElementById("txtProductId3").innerHTML = myProduct3.id;
+        document.getElementById("txtProductId4").innerHTML = myProduct4.id;
+        document.getElementById("txtProductId5").innerHTML = myProduct5.id;
+        document.getElementById("txtDescription1").innerHTML = myProduct1.description;
+        document.getElementById("txtDescription2").innerHTML = myProduct2.description;
+        document.getElementById("txtDescription3").innerHTML = myProduct3.description;
+        document.getElementById("txtDescription4").innerHTML = myProduct4.description;
+        document.getElementById("txtDescription5").innerHTML = myProduct5.description;
+        document.getElementById("txtPrice1").innerHTML = myProduct1.price;
+        document.getElementById("txtPrice2").innerHTML = myProduct2.price;
+        document.getElementById("txtPrice3").innerHTML = myProduct3.price;
+        document.getElementById("txtPrice4").innerHTML = myProduct4.price;
+        document.getElementById("txtPrice5").innerHTML = myProduct5.price;
+        document.getElementById("txtQuantity1").innerHTML = myProduct1.quantity;
+        document.getElementById("txtQuantity2").innerHTML = myProduct2.quantity;
+        document.getElementById("txtQuantity3").innerHTML = myProduct3.quantity;
+        document.getElementById("txtQuantity4").innerHTML = myProduct4.quantity;
+        document.getElementById("txtQuantity5").innerHTML = myProduct5.quantity;
+        document.getElementById("txtTotalValue1").innerHTML = myProduct1.totalValue;
+        document.getElementById("txtTotalValue2").innerHTML = myProduct2.totalValue;
+        document.getElementById("txtTotalValue3").innerHTML = myProduct3.totalValue;
+        document.getElementById("txtTotalValue4").innerHTML = myProduct4.totalValue;
+        document.getElementById("txtTotalValue5").innerHTML = myProduct5.totalValue;
+    }
+// begin if statement - services
+    if (choice == "services") {
+        document.getElementById("products").style.display = "none";    
+        document.getElementById("services").style.display = "block";
+        document.getElementById("employees").style.display = "none";
+        document.getElementById("selectionServices").innerHTML = "Javazon Services";
+// service table header elements
+        document.getElementById("servicesHeader1").innerHTML = "Service ID";
+        document.getElementById("servicesHeader2").innerHTML = "Description";
+        document.getElementById("servicesHeader3").innerHTML = "Hourly Rate";
+        document.getElementById("servicesHeader4").innerHTML = "Minimum Billable hours";
+// service table data elements 
+        document.getElementById("txtServiceId1").innerHTML = myServices1.id;
+        document.getElementById("txtServiceId2").innerHTML = myServices2.id;
+        document.getElementById("txtServiceId3").innerHTML = myServices3.id;
+        document.getElementById("txtServiceId4").innerHTML = myServices4.id;
+        
 
-            if (choice == "employees") {
+        document.getElementById("txtAuthor2").innerHTML = authorDataTwo.name;
+        document.getElementById("txtAuthor3").innerHTML = authorDataThree.name;
+        document.getElementById("txtGenre1").innerHTML = authorDataOne.genre;
+        document.getElementById("txtGenre2").innerHTML = authorDataTwo.genre;
+        document.getElementById("txtGenre3").innerHTML = authorDataThree.genre;
+    }
+// begin if statement - employees
+    if (choice == "employees") {
+        document.getElementById("products").style.display = "none";    
+        document.getElementById("services").style.display = "none";
+        document.getElementById("employees").style.display = "block";
+        document.getElementById("selectionEmployees").innerHTML = "Javazon Employees";
+// employee header elements
+        document.getElementById("employeesHeader1").innerHTML = "Employee ID";
+        document.getElementById("employeesHeader2").innerHTML = "Last Name";
+        document.getElementById("employeesHeader3").innerHTML = "First Name";
+        document.getElementById("employeesHeader4").innerHTML = "Salary";
+// employee table data elements
+        document.getElementById("txtAuthor1").innerHTML = authorDataOne.name;
+        document.getElementById("txtAuthor2").innerHTML = authorDataTwo.name;
+        document.getElementById("txtAuthor3").innerHTML = authorDataThree.name;
+        document.getElementById("txtGenre1").innerHTML = authorDataOne.genre;
+        document.getElementById("txtGenre2").innerHTML = authorDataTwo.genre;
+        document.getElementById("txtGenre3").innerHTML = authorDataThree.genre;
+    }
+// begin if - select
+    if (choice == "select") {
+        document.getElementById("products").style.display = "none";    
+        document.getElementById("services").style.display = "none";
+        document.getElementById("employees").style.display = "none";
+    }
 
-            }
-
-            if (choice == "select") {
-                document.getElementById("products").style.display = "none";    
-                document.getElementById("services").style.display = "none";
-                document.getElementById("employees").style.display = "none";
-            }
 }
+
         </script>
 </div>
 

@@ -28,7 +28,7 @@ body {
     height: 355px;
 }
 
-#favorite-books {
+#products, #services, #employees {
     margin-top: 2%;
     text-align: center;
     color: #4F3674;
@@ -37,12 +37,11 @@ body {
     margin-right: 20%;
     box-shadow: -1px 5px 10px -2px grey;
     padding: 10px;
-    height: 355px;
+    height: auto;
 }
 
 table {
     margin-bottom: 30px;
-    margin-left: 0%;
     margin-top: -15px;
     text-align: left;
     width: 100%;

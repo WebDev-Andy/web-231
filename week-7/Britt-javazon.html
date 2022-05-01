@@ -214,45 +214,45 @@
         };
 
 // products objects created from class
-        let myProduct1 = new Product(1234, "bugzapper", 50, 2);
+        let myProduct1 = new Product(1234, "Intro to Machine Learning", 150, 2);
         console.log(myProduct1);
 
-        let myProduct2 = new Product(8656, "time-machine", 999, 3);
+        let myProduct2 = new Product(8656, "Building Neural Networks", 400, 3);
         console.log(myProduct2);
 
-        let myProduct3 = new Product(0267, "Halo-Drive", 340, 6);
+        let myProduct3 = new Product(0267, "AI Programming 101", 400, 4);
         console.log(myProduct3);
 
-        let myProduct4 = new Product(0336, "flying-potion", 689, 2);
+        let myProduct4 = new Product(0336, "Brain.js Master Course", 250, 8);
         console.log(myProduct4);
 
-        let myProduct5 = new Product(4564, "Hammer-Pants", 10, 2);
+        let myProduct5 = new Product(4564, "TensorFlow.js Master Course", 275, 8);
         console.log(myProduct5);
 
 // service objects created from class
-        let myServices1 = new Services(4311, "chicken-grooming", 45, 3);
+        let myServices1 = new Services(4311, "Algorithms made to order", 2500, 2);
         console.log(myServices1);
 
-        let myServices2 = new Services(9476, "frog-grooming", 65, 2);
+        let myServices2 = new Services(9476, "APIs made to order", 5000, 2);
         console.log(myServices2);
 
-        let myServices3 = new Services(2478, "fish-grooming", 85, 1);
+        let myServices3 = new Services(2478, "Smart Websites with Machine Learning", 20000, 2);
         console.log(myServices3);
 
 // employee objects created from class
-        let myEmployee1 = new Employees(321, "Alan", "Turing", 9999);
+        let myEmployee1 = new Employees(1, "Alan", "Turing", Infinity);
         console.log(myEmployee1);
 
-        let myEmployee2 = new Employees(536, "Rick", "Sanchez", 1);
+        let myEmployee2 = new Employees(536, "Isaac", "Newton", 400000);
         console.log(myEmployee2);
 
-        let myEmployee3 = new Employees(765, "Nicolaus", "Copernicus", 23);
+        let myEmployee3 = new Employees(765, "Nicolaus", "Copernicus", 250000);
         console.log(myEmployee3);
 
-        let myEmployee4 = new Employees(987, "René", "Descartes", 543);
+        let myEmployee4 = new Employees(987, "René", "Descartes", 225000);
         console.log(myEmployee4);
 
-        let myEmployee5 = new Employees(873, "Johnny", "Cash", 544);
+        let myEmployee5 = new Employees(873, "Johannes", "Kepler", 200000);
         console.log(myEmployee5);
 
 // products div, services and employees div containing the tables - Hide tables via display-none
@@ -310,11 +310,11 @@
         document.getElementById("txtDescription4").innerHTML = myProduct4.description;
         document.getElementById("txtDescription5").innerHTML = myProduct5.description;
 // product prices
-        document.getElementById("txtPrice1").innerHTML = myProduct1.price;
-        document.getElementById("txtPrice2").innerHTML = myProduct2.price;
-        document.getElementById("txtPrice3").innerHTML = myProduct3.price;
-        document.getElementById("txtPrice4").innerHTML = myProduct4.price;
-        document.getElementById("txtPrice5").innerHTML = myProduct5.price;
+        document.getElementById("txtPrice1").innerHTML = myProduct1.price.toFixed(2);
+        document.getElementById("txtPrice2").innerHTML = myProduct2.price.toFixed(2);
+        document.getElementById("txtPrice3").innerHTML = myProduct3.price.toFixed(2);
+        document.getElementById("txtPrice4").innerHTML = myProduct4.price.toFixed(2);
+        document.getElementById("txtPrice5").innerHTML = myProduct5.price.toFixed(2);
 // product quantity
         document.getElementById("txtQuantity1").innerHTML = myProduct1.quantity;
         document.getElementById("txtQuantity2").innerHTML = myProduct2.quantity;
@@ -322,11 +322,11 @@
         document.getElementById("txtQuantity4").innerHTML = myProduct4.quantity;
         document.getElementById("txtQuantity5").innerHTML = myProduct5.quantity;
 // product value
-        document.getElementById("txtTotalValue1").innerHTML = myProduct1.totalValue;
-        document.getElementById("txtTotalValue2").innerHTML = myProduct2.totalValue;
-        document.getElementById("txtTotalValue3").innerHTML = myProduct3.totalValue;
-        document.getElementById("txtTotalValue4").innerHTML = myProduct4.totalValue;
-        document.getElementById("txtTotalValue5").innerHTML = myProduct5.totalValue;
+        document.getElementById("txtTotalValue1").innerHTML = myProduct1.totalValue.toFixed(2);
+        document.getElementById("txtTotalValue2").innerHTML = myProduct2.totalValue.toFixed(2);
+        document.getElementById("txtTotalValue3").innerHTML = myProduct3.totalValue.toFixed(2);
+        document.getElementById("txtTotalValue4").innerHTML = myProduct4.totalValue.toFixed(2);
+        document.getElementById("txtTotalValue5").innerHTML = myProduct5.totalValue.toFixed(2);
     }
 // begin if statement - services
     if (choice == "services") {
@@ -348,9 +348,9 @@
         document.getElementById("txtDescriptionServices2").innerHTML = myServices2.description;
         document.getElementById("txtDescriptionServices3").innerHTML = myServices3.description;
 // services hourly rates
-        document.getElementById("txtHourlyRate1").innerHTML = myServices1.hourlyRate;
-        document.getElementById("txtHourlyRate2").innerHTML = myServices2.hourlyRate;
-        document.getElementById("txtHourlyRate3").innerHTML = myServices3.hourlyRate;
+        document.getElementById("txtHourlyRate1").innerHTML = myServices1.hourlyRate.toFixed(2);
+        document.getElementById("txtHourlyRate2").innerHTML = myServices2.hourlyRate.toFixed(2);
+        document.getElementById("txtHourlyRate3").innerHTML = myServices3.hourlyRate.toFixed(2);
 // services min hours billed
         document.getElementById("txtMinBillHours1").innerHTML = myServices1.min;
         document.getElementById("txtMinBillHours2").innerHTML = myServices2.min;
@@ -387,10 +387,10 @@
         document.getElementById("txtLastName5").innerHTML = myEmployee5.lastName;
 // employee salary
         document.getElementById("txtSalary1").innerHTML = myEmployee1.salary;
-        document.getElementById("txtSalary2").innerHTML = myEmployee2.salary;
-        document.getElementById("txtSalary3").innerHTML = myEmployee3.salary;
-        document.getElementById("txtSalary4").innerHTML = myEmployee4.salary;
-        document.getElementById("txtSalary5").innerHTML = myEmployee5.salary;
+        document.getElementById("txtSalary2").innerHTML = myEmployee2.salary.toFixed(2);
+        document.getElementById("txtSalary3").innerHTML = myEmployee3.salary.toFixed(2);
+        document.getElementById("txtSalary4").innerHTML = myEmployee4.salary.toFixed(2);
+        document.getElementById("txtSalary5").innerHTML = myEmployee5.salary.toFixed(2);
        
     }
 // begin if - select

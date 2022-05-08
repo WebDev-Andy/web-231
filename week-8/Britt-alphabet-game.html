@@ -1,0 +1,95 @@
+<!--
+=========================================
+; Title: Britt-alphabet-game.html
+; Author: Andrew Britt
+; Date: 6 May 2022
+; Description: HTML for Alphabet Game
+; Reference: https://www.w3schools.com/js/js_if_else.asp
+; Date reference accessed: 6 May 2022
+=========================================    
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Britt-alphabet-game.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+   
+    <title>WEB 231 - Enterprise JavaScript I</title>
+</head>
+<body>
+    <h1 class="app-header">Welcome to the Alphabet Game!</h1>
+
+<!--main div for selector and button-->
+    <div id="card-title">
+        <p id="form-title">Alphabet Number Form</p>
+        <div>
+            <label id="form-field">Alphabet Letter Position</label>
+                <input id="txtPosition" type="text">
+                </input>
+            <br>
+
+<!--button onClick value capture-->
+            <button id="btnFindLetter" type ="button" onclick="alphaFunction()">Find Letter</button>
+        </div>
+    </div>
+
+<!--return button, goes to index file-->
+    <a id="return" href="../index.html">Return</a>
+
+    <div id="alphabet">
+        <p>Letters in the Alphabet</p>
+        <p id="alphaShowActual"></p>
+    </div>
+    
+    <div id="results">
+        <p>Results</p>
+        <p id="resultsActual"></p>
+    </div>
+        <script>
+
+// My alphabet array
+            const alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+
+// output variable
+            let alphabetOutput = "";
+
+// This hides the Results div until a selection is made and button clicked
+            document.getElementById("results").style.display = "none";
+
+// binding output variable to div for display
+            alphabet.forEach(myFunction);
+            document.getElementById("alphaShowActual").innerHTML = alphabetOutput.slice(0,-2);
+
+// function to output array into string
+            function myFunction(value) {
+                alphabetOutput += value + ", ";
+            }
+// This is the button onClick function
+            function alphaFunction() {
+                let pos = document.getElementById("txtPosition").value;
+                let letter = "";
+// for loop - loops through alphabet and stops at input's selected value
+                for (let i = 0; pos > i; i++) {
+                    letter = alphabet[i] ;
+                    console.log(letter);
+                if (letter == undefined) {
+                    document.getElementById("results").style.display = "block";
+                    document.getElementById("resultsActual").innerHTML = "There is not " + pos + " letters in the alphabet";
+                } else {
+                    document.getElementById("results").style.display = "block";
+                    document.getElementById("resultsActual").innerHTML = letter + " is at position " + pos + " in the alphabet";
+                    }
+
+                }
+                
+            }
+        
+        </script>
+
+</body>
+</html>

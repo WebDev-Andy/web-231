@@ -1,9 +1,9 @@
 /*
 ==========================================
-; Title: Britt-javazon.css
+; Title: Britt-alphabet-game.css
 ; Author: Andrew Britt
-; Date: 27 Apr 2022
-; Description: Styles for javazon 
+; Date: 05 May 2022
+; Description: Styles for Alphabet Game
 ==========================================    
 */
 body {
@@ -14,44 +14,6 @@ body {
     box-shadow: -1px 5px 10px -2px grey;
     margin-left: 20%;
     margin-right: 20%;
-}
-
-#products, #services, #employees {
-    margin-top: 2%;
-    text-align: center;
-    color: #4F3674;
-    font-size: 28px;
-    margin-left: 20%;
-    margin-right: 20%;
-    box-shadow: -1px 5px 10px -2px grey;
-    padding: 10px;
-    height: auto;
-}
-
-table {
-    margin-bottom: 30px;
-    margin-top: -15px;
-    text-align: left;
-    width: 100%;
-    border-collapse: collapse;
-}
-
-th {
-    background-color: #4F3674;
-    color: white;
-    padding-top: 12px;
-    padding-left: 9px;
-    border: solid #ccc 1px;
-    padding-bottom: 12px;
-}
-
-td {
-    border: solid #ccc 1px;
-    padding: 10px;
-}
-
-tr:hover {
-    background-color: #D6A800;
 }
 
 #form-field {
@@ -68,7 +30,12 @@ tr:hover {
     text-align: center;
 }
 
-#btnDisplayListing {
+input {
+    width: 25%;
+    min-width: 1%;
+}
+
+#btnFindLetter {
     margin-top: 4%;
     margin-left: 5%;
     margin-bottom: 2%;
@@ -88,3 +55,18 @@ tr:hover {
     color: #4F3674;
 }
 
+#alphabet, #results {
+    box-shadow: -1px 5px 10px -2px grey;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    font-size: 28px;
+    color: #4F3674;
+}
+
+#alphaShowActual, #resultsActual {
+    color: black;
+    margin-top: -20px;
+    margin-left: 5%;
+    margin-right: 5%;
+}

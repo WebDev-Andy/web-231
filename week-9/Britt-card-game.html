@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Britt-card-game.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+   
+    <title>WEB 231 - Enterprise JavaScript I</title>
+</head>
+<body>
+    
+    <h1 class="app-header">Welcome to the Card Game!</h1>
+
+    <!--main div for selector and button-->
+        <div id="card-title">
+            <p id="form-title">Card Dealer</p>
+                <button id="btnFindLetter" type ="button" onclick="getDeckOfCards()">Deal Cards</button>
+        </div>
+    
+    <!--return button, goes to index file-->
+        <a id="return" href="../index.html">Return</a>
+    
+<!--Beginning of JavaScript code-->  
+    <script>
+
+const faces = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+const suits = ["Hearts", "Diamonds", "Clubs", "Spades"];
+let CARD_COUNT = 52;
+let cards = [];
+
+class Card {
+    constructor(face, suit) {
+        this.face = face;
+        this.suit = suit;
+    }
+}
+
+let card = new Card ();
+    console.log(card);
+
+class Dealer {
+    constructor() {
+
+    }
+}
+
+function getDeckOfCards () {
+    for (count = 0; count < CARD_COUNT; count++) {
+        console.log(count);
+    }
+
+}
+
+function shuffle () {
+
+}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+/*
+==========================================
+; Title: Britt-alphabet-game.css
+; Author: Andrew Britt
+; Date: 05 May 2022
+; Description: Styles for Alphabet Game
+==========================================    
+*/
+body {
+    font-family: 'Oswald', Verdana, Arial, sans-serif;
+    background-color: #2a282e;
+}
+
+#card-title {
+    box-shadow: -1px 5px 10px -2px rgb(0, 0, 0);
+    border: rgb(0, 0, 0) solid .1px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+#form-field {
+    margin-left: 5%;
+}
+
+#form-title {
+    text-align: center;
+    color: #4F3674;
+    font-size: 28px;
+}
+
+.app-header {
+    text-align: center;
+}
+
+#btnFindLetter {
+    margin-left: 2%;
+    margin-top: 0%;
+    margin-bottom: 2%;
+    width: 96%;
+    height: 50px;
+    
+    background-color: #4F3674;
+    color: rgb(197, 196, 196);
+    padding-left: 17%;
+    padding-right: 17%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    border: solid black 1px;
+    border-radius: 2%;
+}
+
+#return {
+    margin-left: 20%;
+    text-decoration: none;
+    color: #4F3674;
+}
+
+#alphabet, #results {
+    box-shadow: -1px 5px 10px -2px rgb(0, 0, 0);
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    font-size: 28px;
+    color: #4F3674;
+}
+
+#alphaShowActual, #resultsActual {
+    color: black;
+    margin-top: -20px;
+    margin-left: 5%;
+    margin-right: 5%;
+}

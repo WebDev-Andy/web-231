@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.6.96/css/materialdesignicons.min.css" rel="stylesheet">
    
     <title>WEB 231 - Enterprise JavaScript I</title>
 </head>
@@ -18,47 +19,95 @@
     <!--main div for selector and button-->
         <div id="card-title">
             <p id="form-title">Card Dealer</p>
-                <button id="btnFindLetter" type ="button" onclick="getDeckOfCards()">Deal Cards</button>
+                <button id="btnDealCards" type ="button">Deal Cards</button>
         </div>
     
     <!--return button, goes to index file-->
         <a id="return" href="../index.html">Return</a>
-    
+
+        <div id="test"></div>
+
 <!--Beginning of JavaScript code-->  
-    <script>
+<script>
 
-const faces = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
-const suits = ["Hearts", "Diamonds", "Clubs", "Spades"];
-let CARD_COUNT = 52;
-let cards = [];
-
-class Card {
-    constructor(face, suit) {
+class Card 
+{
+    constructor(face, suit) 
+    {
         this.face = face;
         this.suit = suit;
     }
 }
 
-let card = new Card ();
-    console.log(card);
+class Dealer 
+{
+    CARD_COUNT = 52;
+    cards = [];
+    faces = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+    suits = ["Hearts", "Diamonds", "Clubs", "Spades"];
 
-class Dealer {
-    constructor() {
+    constructor() 
+    {   
+        this.getDeckOfCards();
+    }
+    getDeckOfCards() 
+    {
+        for (let count = 0; count < this.CARD_COUNT; count++) 
+        {
+            this.cards[count] = new Card(this.faces[count % 13], this.suits[Math.floor(count / 13)]);
+        }
+    }
+    shuffle() 
+    {
+        for (let firstCard = 0; firstCard < this.CARD_COUNT; firstCard++)
+        {
+            let secondCard = Math.floor(Math.random() * this.CARD_COUNT);
+            let tempCard = this.cards[firstCard];
+            this.cards[firstCard] = this.cards[secondCard];
+            this.cards[secondCard] = tempCard;
+        }
+    }
+} // End of Dealer class
+
+// This should build the players card
+function buildPlayerCard (card, suitIcon, faceColor, suitColor)
+{
+    return `<div class="player-card-container"><div class="card-title" style="text-align: left; font-size: 20px; padding-left: 10px; color: ${faceColor}">${card.face}</div><div class="card-content" style="font-size: 28px; padding-bottom: 25px;"><span class="${suitIcon}" style="color: ${suitColor}"></span></div></div>`;
+}
+
+document.getElementById("btnDealCards").onclick = function()
+{
+   let dealer = new Dealer();
+
+    dealer.shuffle();
+
+    let cardOutputWithIcon = "";
+
+    for (const card of dealer.cards) 
+    {
+        switch (card.suit)
+        {
+            case "Hearts":
+                cardOutputWithIcon += buildPlayerCard(card, "mdi mdi-cards-heart", "red", "red");
+                break;
+                
+            case "Diamonds":
+                cardOutputWithIcon += buildPlayerCard(card, "mdi mdi-cards-diamond", "red", "red");
+                break;
+
+            case "Clubs":
+                cardOutputWithIcon += buildPlayerCard(card, "mdi mdi-cards-club", "black", "black");
+                break;
+
+            case "Spades":
+                cardOutputWithIcon += buildPlayerCard(card, "mdi mdi-cards-spade", "black", "black");
+                break;
+        }
 
     }
-}
-
-function getDeckOfCards () {
-    for (count = 0; count < CARD_COUNT; count++) {
-        console.log(count);
-    }
-
-}
-
-function shuffle () {
-
-}
-
+    document.getElementById("test").innerHTML = cardOutputWithIcon;
+    //console.log(cardOutputWithIcon);
+};
     </script>
 </body>
 </html>

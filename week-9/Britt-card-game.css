@@ -16,10 +16,36 @@ body {
     border: rgb(0, 0, 0) solid .1px;
     margin-left: 20%;
     margin-right: 20%;
+    text-align: left;
+    font-size: 20px;
+    
 }
 
-#form-field {
-    margin-left: 5%;
+#test {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px;
+    grid-gap: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+    box-shadow: -1px 5px 10px -2px rgb(0, 0, 0);
+    border: rgb(0, 0, 0) solid .1px;
+}
+
+.player-card-container {
+    box-shadow: -1px 5px 10px -2px rgb(0, 0, 0);
+    border: rgb(0, 0, 0) solid .1px;
+    
+    
+
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px;
+    grid-gap: 10px;
+}
+
+.player-card {
+    text-align: center;
 }
 
 #form-title {
@@ -32,13 +58,12 @@ body {
     text-align: center;
 }
 
-#btnFindLetter {
+#btnDealCards {
     margin-left: 2%;
     margin-top: 0%;
     margin-bottom: 2%;
     width: 96%;
     height: 50px;
-    
     background-color: #4F3674;
     color: rgb(197, 196, 196);
     padding-left: 17%;
@@ -55,7 +80,7 @@ body {
     color: #4F3674;
 }
 
-#alphabet, #results {
+#results {
     box-shadow: -1px 5px 10px -2px rgb(0, 0, 0);
     margin-left: 20%;
     margin-right: 20%;
@@ -64,9 +89,3 @@ body {
     color: #4F3674;
 }
 
-#alphaShowActual, #resultsActual {
-    color: black;
-    margin-top: -20px;
-    margin-left: 5%;
-    margin-right: 5%;
-}

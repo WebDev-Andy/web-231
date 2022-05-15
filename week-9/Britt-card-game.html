@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.6.96/css/materialdesignicons.min.css" rel="stylesheet">
+    
    
     <title>WEB 231 - Enterprise JavaScript I</title>
 </head>
@@ -29,6 +29,8 @@
 
 <!--Beginning of JavaScript code-->  
 <script>
+    // This hides the Results div until a selection is made and button clicked
+    document.getElementById("test").style.display = "none";
 
 class Card 
 {
@@ -75,6 +77,7 @@ function buildPlayerCard (card, suitIcon, faceColor, suitColor)
     return `<div class="player-card-container"><div class="card-title" style="text-align: left; font-size: 20px; padding-left: 10px; color: ${faceColor}">${card.face}</div><div class="card-content" style="font-size: 28px; padding-bottom: 25px;"><span class="${suitIcon}" style="color: ${suitColor}"></span></div></div>`;
 }
 
+document.getElementsByClassName("card-title")
 document.getElementById("btnDealCards").onclick = function()
 {
    let dealer = new Dealer();
@@ -105,6 +108,7 @@ document.getElementById("btnDealCards").onclick = function()
         }
 
     }
+    document.getElementById("test").style.display = "grid";
     document.getElementById("test").innerHTML = cardOutputWithIcon;
     //console.log(cardOutputWithIcon);
 };

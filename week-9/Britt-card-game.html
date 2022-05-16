@@ -1,3 +1,13 @@
+<!--
+=========================================
+; Title: Britt-card-game.html
+; Author: Andrew Britt
+; Date: 14 May 2022
+; Description: HTML and JavaScript for Card Shuffling App
+; Reference: Professor Krasso
+; Date reference accessed: 13 May 2022
+=========================================    
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +19,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.6.96/css/materialdesignicons.min.css" rel="stylesheet">-
    
     <title>WEB 231 - Enterprise JavaScript I</title>
 </head>
@@ -25,12 +36,12 @@
     <!--return button, goes to index file-->
         <a id="return" href="../index.html">Return</a>
 
-        <div id="test"></div>
+        <div id="hidDiv"></div>
 
 <!--Beginning of JavaScript code-->  
 <script>
     // This hides the Results div until a selection is made and button clicked
-    document.getElementById("test").style.display = "none";
+    document.getElementById("hidDiv").style.display = "none";
 
 class Card 
 {
@@ -77,7 +88,6 @@ function buildPlayerCard (card, suitIcon, faceColor, suitColor)
     return `<div class="player-card-container"><div class="card-title" style="text-align: left; font-size: 20px; padding-left: 10px; color: ${faceColor}">${card.face}</div><div class="card-content" style="font-size: 28px; padding-bottom: 25px;"><span class="${suitIcon}" style="color: ${suitColor}"></span></div></div>`;
 }
 
-document.getElementsByClassName("card-title")
 document.getElementById("btnDealCards").onclick = function()
 {
    let dealer = new Dealer();
@@ -108,10 +118,12 @@ document.getElementById("btnDealCards").onclick = function()
         }
 
     }
-    document.getElementById("test").style.display = "grid";
-    document.getElementById("test").innerHTML = cardOutputWithIcon;
+    document.getElementById("hidDiv").style.display = "grid";
+    document.getElementById("hidDiv").innerHTML = cardOutputWithIcon;
     //console.log(cardOutputWithIcon);
 };
     </script>
+
+    
 </body>
 </html>

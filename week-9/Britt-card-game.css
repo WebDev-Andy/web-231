@@ -10,6 +10,10 @@ body {
     font-family: 'Oswald', Verdana, Arial, sans-serif;
  
 }
+.mainWords {
+    font-size: 50px;
+    text-align: center;
+}
 
 #card-title {
     box-shadow: -1px 5px 10px -2px grey;
@@ -17,10 +21,9 @@ body {
     margin-right: 20%;
     text-align: left;
     font-size: 20px;
-    
 }
 
-#test {
+#hidDiv {
     display: grid;
     grid-template-columns: auto auto auto auto;
     padding: 10px;
@@ -28,7 +31,6 @@ body {
     margin-left: 20%;
     margin-right: 20%;
     box-shadow: -1px 5px 10px -2px grey;
-
 }
 
 .player-card-container {
